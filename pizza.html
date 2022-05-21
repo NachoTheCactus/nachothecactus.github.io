@@ -1,0 +1,253 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Resources/Logo_icon_no_b.png" />
+    <link rel="stylesheet" href="general.css" />
+    <title>Pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7d18d4adff.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Rokkitt:wght@700&display=swap");
+    </style>
+    <link rel="stylesheet" href="mancare.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="general.js"></script>
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <div id="div_btn_close">
+        <button class="btn_close">X</button>
+      </div>
+      <div class="sidenav_logo">
+        <a href="index.html#first_section"
+          ><img
+            id="header_logo"
+            src="Resources/Logo/Logo_no_b2.png"
+            alt="imagine logo"
+        /></a>
+      </div>
+      <div class="linie_lunga"></div>
+      <div id="menu_list" class="menu_list">
+        <a href="meniul_zilei.html">Meniul zilei!</a>
+        <a href="meniu.html">Meniu</a>
+        <a href="index.html#second_section">Despre noi</a>
+        <a href="#footer">Contact</a>
+      </div>
+      <div id="menu_lower">
+        <a href="https://www.facebook.com" target="_blank"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <div id="sidenav_footer"></div>
+    </div>
+    <div id="div_reservations" style="display: none">
+      <div id="div_res_p1">
+        <h1>Rezervari</h1>
+        <p>
+          Rezervarile sunt acceptate pana la o luna inainte de data rezervarii.
+          Rezervarile pot avea un maxim de 6 persoane, pentru rezervari cu mai
+          mult de 6 persoane, va rugam sa ne contactati la beemos@restaurant.com
+        </p>
+      </div>
+      <div id="div_res_p2">
+        <form action="" id="reservation_form"></form>
+
+        <div>
+          <label for="select_location">Locatie</label>
+          <select
+            id="select_location"
+            name="select_location"
+            form="reservation_form"
+          >
+            <option value="oradea">Oradea</option>
+            <option value="cluj">Cluj</option>
+            <option value="bucuresti">Bucuresti</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="reservation_date">Data</label>
+          <input
+            type="text"
+            name="reservation_date"
+            id="reservation_date"
+            placeholder="0"
+          />
+        </div>
+
+        <div>
+          <label for="select_time">Ora</label>
+          <select id="select_time" name="select_time" form="reservation_form">
+            <option value="am12">12:00 AM</option>
+            <option value="pm1">1:00 PM</option>
+            <option value="pm1">2:00 PM</option>
+            <option value="pm1">3:00 PM</option>
+            <option value="pm1">4:00 PM</option>
+            <option value="pm1">5:00 PM</option>
+            <option value="pm1">6:00 PM</option>
+            <option value="pm1">7:00 PM</option>
+            <option value="pm1">8:00 PM</option>
+            <option value="pm1">9:00 PM</option>
+            <option value="pm1">10:00 PM</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="select_party_size">Numar de <br />persoane</label>
+          <select
+            id="select_party_size"
+            name="select_party_size"
+            form="reservation_form"
+          >
+            <option value="party_size_1">1</option>
+            <option value="party_size_2">2</option>
+            <option value="party_size_3">3</option>
+            <option value="party_size_4">4</option>
+            <option value="party_size_5">5</option>
+            <option value="party_size_6">6</option>
+          </select>
+        </div>
+      </div>
+      <div id="div_res_p3">
+        <button id="res_btn_x">X</button>
+        <button id="res_btn_submit">Rezerva</button>
+      </div>
+    </div>
+    <nav class="navigation_bar">
+      <button id="btn_burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <a href="index.html#first_section"
+        ><img
+          id="header_logo"
+          src="Resources/Logo/Logo_no_b2.png"
+          alt="imagine logo"
+      /></a>
+      <div class="meniu_header">
+        <button onclick="window.location.href='meniul_zilei.html';">
+          MENIUL ZILEI
+        </button>
+        <button onclick="window.location.href='meniu.html';">MENIU</button>
+        <button onclick="window.location.href='index.html#second_section';">
+          DESPRE NOI
+        </button>
+        <button onclick="window.location.href='#footer';">CONTACT</button>
+      </div>
+      <button id="btn_reservations">REZERVARI</button>
+    </nav>
+
+    <div id="grayblock" class="gray_block"></div>
+
+    <section id="menu_title" style="background-image: url('Resources/Background.jpg');">
+      <h1>Pizza</h1>
+    </section>
+
+    <section id="sect_content" style="background-image: url(Resources/Menu/pizza_d.jpg); background-attachment: fixed;">
+      <div id="div_content">
+        <div id="div_food">
+          <div class="food_type">
+            <h2>MARGHERITA</h2>
+            <div><p>sos de roșii, mozzarella</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>PROSCIUTTO</h2>
+            <div><p>sos de roșii, mozzarella, prosciutto cotto</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>CAPRICIOSA</h2>
+            <div><p>sos de roșii, mozzarella, șuncă, ciuperci, porumb</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>DOMINGO</h2>
+            <div><p>sos de roșii, mozzarella, șuncă, ciuperci, peperoni</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>FIORENTINA</h2>
+            <div><p>sos de roșii, mozzarella, ardei, ciuperci, porumb, roșii, măsline</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>EXOTICA</h2>
+            <div><p>sos de roșii, mozzarella, șuncă, cârnați, ardei, ceapă</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>VEGETARIANA</h2>
+            <div><p>sos de roșii, mozzarella, șuncă, bacon, salam</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>UNGARESE</h2>
+            <div><p>sos de roșii, mozzarella, cârnați, ciuperci, fasole, ardei, porumb</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>CANIBALLE</h2>
+            <div><p>sos de roșii, mozzarella, salam, ardei iute</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>QUATTRO STAGIONI</h2>
+            <div><p>sos de roșii, mozzarella, șuncă, porumb, ardei, ciuperci, măsline</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>TONNO</h2>
+            <div><p>sos de roșii, mozzarella, ton bucăți, măsline, ceapă roșie</p><p>37 RON</p></div>
+          </div>
+          <div class="food_type">
+            <h2>SALAMI</h2>
+            <div><p>sos de roșii, mozzarella, salam Napoli</p><p>37 RON</p></div>
+          </div>
+        </div>
+        <div id="div_butoane">
+          <button class="btn_rezervari">Rezerva o masa</button>
+          <button onclick="alert('Comanda acum la numarul de telefon: 0712312312')">Comanda acum</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <a href="index.html#first_section"
+        ><img
+          id="header_logo"
+          src="Resources/Logo/Logo_no_b2.png"
+          alt="imagine logo"
+      /></a>
+      <div id="footer_info">
+        <div>
+          <h3>Adresa</h3>
+          <p>Str. Inventata Nr. 42C</p>
+        </div>
+        <div>
+          <h3>Numar de telefon</h3>
+          <p>0712312312</p>
+        </div>
+        <div>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

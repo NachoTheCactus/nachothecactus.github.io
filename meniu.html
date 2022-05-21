@@ -1,0 +1,315 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Resources/Logo_icon_no_b.png" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="meniu.css" />
+    <title>Meniu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7d18d4adff.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Rokkitt:wght@700&display=swap");
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    \
+    <script src="general.js"></script>
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <div id="div_btn_close">
+        <button class="btn_close">X</button>
+      </div>
+      <div class="sidenav_logo">
+        <a href="index.html#first_section"
+          ><img
+            id="header_logo"
+            src="Resources/Logo/Logo_no_b2.png"
+            alt="imagine logo"
+        /></a>
+      </div>
+      <div class="linie_lunga"></div>
+      <div id="menu_list" class="menu_list">
+        <a href="meniul_zilei.html">Meniul zilei!</a>
+        <a href="meniu.html">Meniu</a>
+        <a href="index.html#second_section">Despre noi</a>
+        <a href="#footer">Contact</a>
+      </div>
+      <div id="menu_lower">
+        <a href="https://www.facebook.com" target="_blank"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <div id="sidenav_footer"></div>
+    </div>
+    <div id="div_reservations" style="display: none">
+      <div id="div_res_p1">
+        <h1>Rezervari</h1>
+        <p>
+          Rezervarile sunt acceptate pana la o luna inainte de data rezervarii.
+          Rezervarile pot avea un maxim de 6 persoane, pentru rezervari cu mai
+          mult de 6 persoane, va rugam sa ne contactati la beemos@restaurant.com
+        </p>
+      </div>
+      <div id="div_res_p2">
+        <form action="" id="reservation_form"></form>
+
+        <div>
+          <label for="select_location">Locatie</label>
+          <select
+            id="select_location"
+            name="select_location"
+            form="reservation_form"
+          >
+            <option value="oradea">Oradea</option>
+            <option value="cluj">Cluj</option>
+            <option value="bucuresti">Bucuresti</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="reservation_date">Data</label>
+          <input
+            type="text"
+            name="reservation_date"
+            id="reservation_date"
+            placeholder="0"
+          />
+        </div>
+
+        <div>
+          <label for="select_time">Ora</label>
+          <select id="select_time" name="select_time" form="reservation_form">
+            <option value="am12">12:00 AM</option>
+            <option value="pm1">1:00 PM</option>
+            <option value="pm1">2:00 PM</option>
+            <option value="pm1">3:00 PM</option>
+            <option value="pm1">4:00 PM</option>
+            <option value="pm1">5:00 PM</option>
+            <option value="pm1">6:00 PM</option>
+            <option value="pm1">7:00 PM</option>
+            <option value="pm1">8:00 PM</option>
+            <option value="pm1">9:00 PM</option>
+            <option value="pm1">10:00 PM</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="select_party_size">Numar de <br />persoane</label>
+          <select
+            id="select_party_size"
+            name="select_party_size"
+            form="reservation_form"
+          >
+            <option value="party_size_1">1</option>
+            <option value="party_size_2">2</option>
+            <option value="party_size_3">3</option>
+            <option value="party_size_4">4</option>
+            <option value="party_size_5">5</option>
+            <option value="party_size_6">6</option>
+          </select>
+        </div>
+      </div>
+      <div id="div_res_p3">
+        <button id="res_btn_x">X</button>
+        <button id="res_btn_submit">Rezerva</button>
+      </div>
+    </div>
+    <nav class="navigation_bar">
+      <button id="btn_burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <a href="index.html#first_section"
+        ><img
+          id="header_logo"
+          src="Resources/Logo/Logo_no_b2.png"
+          alt="imagine logo"
+      /></a>
+      <div class="meniu_header">
+        <button onclick="window.location.href='meniul_zilei.html';">
+          MENIUL ZILEI
+        </button>
+        <button onclick="window.location.href='meniu.html';">MENIU</button>
+        <button onclick="window.location.href='index.html#second_section';">
+          DESPRE NOI
+        </button>
+        <button onclick="window.location.href='#footer';">CONTACT</button>
+      </div>
+      <button id="btn_reservations">REZERVARI</button>
+    </nav>
+
+    <div id="grayblock" class="gray_block"></div>
+
+    <section id="menu_title">
+      <h1>Meniu</h1>
+    </section>
+    <section id="sect_content">
+      <section id="sect_pizza" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Pizza</h2>
+              <p>Pizza este un fel de mâncare cu originea în Napoli, Italia. Este o pâine plată, de obicei rotundă, acoperită cu sos de roșii și brânză, plus alte topping-uri opționale, preparată la cuptor.
+                Pissa este un termen latin, apărut în secolul IX, care înseamnă "pâine plată". Un om care se pricepe la prepararea pizzei se numește "pizzaiolo", iar un restaurant care servește pizza se numește "pizzerie" (it. pizzeria). </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/pizza.jpg" alt="" />
+              <button id="btn_pizza" onclick="window.location.href='pizza.html'">VEZI PIZZA</button>
+          </div>
+        </div>
+        <button class="btn_mob" id="btn_pizza_mob" onclick="window.location.href='pizza.html'">VEZI PIZZA</button>
+        </div>
+      </section>
+      <section id="sect_burgeri" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Burgeri</h2>
+              <p>
+                Hamburgerul (scurt și Burger) este un fel de mâncare pregătită rapid, caldă. Constă dintr-o chiflă (bun), o felie la grătar de carne tocată de vită (patty), și în general, diverse legume (roșii, ceapă, salată etc.), sosuri (ketchup, muștar, maioneză etc.). Chifteaua se face în general din carne tocată de vită, la care se adaugă condimente, (ceapă, usturoi, sare, boia, pătrunjel etc.) și se frige pe grătar sau în vas teflonat fără grăsime.
+              </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/burger.jpg" alt="" />
+              <button id="btn_burgeri" onclick="window.location.href='burgeri.html'">VEZI BURGERI</button>
+          </div>
+        </div>
+        <button class="btn_mob" id="btn_burgeri_mob" onclick="window.location.href='burgeri.html'">VEZI BURGERI</button>
+        </div>
+      </section>
+      <section id="sect_paste" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Paste</h2>
+              <p>
+                Pastele făinoase (pasta, în italiană), sunt un produs alimentar obținut prin uscarea aluatului nedospit de făină cu apă, la care se poate adăuga de asemenea și sare sau ouă. Pastele colorate pot conține și zarzavaturi sau legume precum pastele verzui conțin spanac sau pastele roșiatice, roșii. Pastele făinoase sunt tăiate în diferite forme și mărimi. Făina din care se obțin pastele în Europa este în general cea de grâu dur.
+              </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/paste.jpg" alt="" />
+              <button id="btn_paste" onclick="window.location.href='paste.html'">VEZI PASTE</button>
+          </div>
+        </div>
+        <button class="btn_mob" id="btn_paste_mob" onclick="window.location.href='paste.html'">VEZI PASTE</button>
+        </div>
+      </section>
+      <section id="sect_supe" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Supe</h2>
+              <p>
+                Supa este o fiertură de legume sau de carne cu legume la care se pot adăuga tăiței, zarzavaturi, precum și mirodenii. Supa poate fi servită ca atare sau strecurată; există de asemenea și supe creme.
+              </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/supe.jpg" alt="" />
+              <button id="btn_supe" onclick="window.location.href='supe.html'">VEZI SUPE</button>
+          </div>
+        </div>
+        <button class="btn_mob" id="btn_supe_mob" onclick="window.location.href='supe.html'">VEZI SUPE</button>
+        </div>
+      </section>
+      <section id="sect_salate" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Salate</h2>
+              <p>
+                Salata este o grupare dintr-o gamă largă de mâncăruri care includ legume fierte sau crude. Acestea mai pot include și ouă, cereale, fructe, brânză, fructe de mare și carne.
+              </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/salate.jpg" alt="" />
+              <button id="btn_salate" onclick="window.location.href='salate.html'">VEZI SALATE</button>
+          </div>
+        </div>
+          <button class="btn_mob" id="btn_salate_mob" onclick="window.location.href='salate.html'">VEZI SALATE</button>
+        </div>
+      </section>
+      <section id="sect_desert" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Desert</h2>
+              <p>
+                Desertul este o mâncare care se consumă la finalul mesei. Deserturile obișnuite sunt biscuiți, tort, prăjitură, gelatină, înghețată, plăcintă, budincă, tartă sau turtă.
+                De obicei acestea sunt dulci.
+              </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/desert.jpg" alt="" />
+              <button id="btn_desert" onclick="window.location.href='desert.html'">VEZI DESERT</button>
+          </div>
+        </div>
+        <button class="btn_mob" id="btn_desert_mob" onclick="window.location.href='desert.html'">VEZI DESERT</button>
+        </div>
+      </section>
+      <section id="sect_bauturi" class="sect_element">
+        <div>
+          <div class="title_desc">
+            <div class="div_text">
+              <h2>Bauturi</h2>
+              <p>
+                Bauturi racoritoare sau calde, fara sau cu alcool. Va recomandam cocktailurile casei (un mix placut de fructe proaspete cu un adaos de siropuri sau arome).
+              </p>
+            </div>
+            <div class="img_rama">
+              <img src="Resources/Menu/bauturi.jpg" alt="" />
+              <button id="btn_bauturi" onclick="window.location.href='bauturi.html'">VEZI BAUTURI</button>
+          </div>
+        </div>
+        <button class="btn_mob" id="btn_bauturi_mob" onclick="window.location.href='bauturi.html'">VEZI BAUTURI</button>
+        </div>
+      </section>
+    </section>
+    <section id="footer">
+      <a href="index.html#first_section"
+        ><img
+          id="header_logo"
+          src="Resources/Logo/Logo_no_b2.png"
+          alt="imagine logo"
+      /></a>
+      <div id="footer_info">
+        <div>
+          <h3>Adresa</h3>
+          <p>Str. Inventata Nr. 42C</p>
+        </div>
+        <div>
+          <h3>Numar de telefon</h3>
+          <p>0712312312</p>
+        </div>
+        <div>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
